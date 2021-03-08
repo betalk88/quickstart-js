@@ -69,12 +69,26 @@ limitations under the License.
   </main>
 </div>
 
-<!-- Import and configure the Firebase SDK -->
-<!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
-<!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-<script src="/__/firebase/8.2.10/firebase-app.js"></script>
-<script src="/__/firebase/8.2.10/firebase-messaging.js"></script>
-<script src="/__/firebase/init.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-messaging.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAHQ43vkZcGP-nNxNzyPsk_izWu4Y8dhwg",
+    authDomain: "ohmymountains.firebaseapp.com",
+    projectId: "ohmymountains",
+    storageBucket: "ohmymountains.appspot.com",
+    messagingSenderId: "188283830754",
+    appId: "1:188283830754:web:49891612c491f25b49b9bb",
+    measurementId: "G-6K6LFJTMG0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
 
 <script>
   // Retrieve Firebase Messaging object.
@@ -99,7 +113,7 @@ limitations under the License.
     showToken('loading...');
     // Get registration token. Initially this makes a network call, once retrieved
     // subsequent calls to getToken will return from cache.
-    messaging.getToken({vapidKey: '<YOUR_PUBLIC_VAPID_KEY_HERE>'}).then((currentToken) => {
+    messaging.getToken({vapidKey: 'BAojbalX74Cqk9AT1QwQnVixb-PxmkmqfxejVQRHj1Oc4FRmpfMGVbG0jP3JeasofWF2oujuH92y640V9OU_5o8'}).then((currentToken) => {
       if (currentToken) {
         sendTokenToServer(currentToken);
         updateUIForPushEnabled(currentToken);
