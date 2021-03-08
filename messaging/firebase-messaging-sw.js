@@ -1,9 +1,21 @@
 // Import and configure the Firebase SDK
 // These scripts are made available when the app is served or deployed on Firebase Hosting
 // If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup
-importScripts('/__/firebase/8.2.10/firebase-app.js');
-importScripts('/__/firebase/8.2.10/firebase-messaging.js');
-importScripts('/__/firebase/init.js');
+importScripts('https://www.gstatic.com/firebasejs/8.2.10/firebase-app.jss');
+importScripts('https://www.gstatic.com/firebasejs/8.2.10/firebase-messaging.js');
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAHQ43vkZcGP-nNxNzyPsk_izWu4Y8dhwg",
+    authDomain: "ohmymountains.firebaseapp.com",
+    projectId: "ohmymountains",
+    storageBucket: "ohmymountains.appspot.com",
+    messagingSenderId: "188283830754",
+    appId: "1:188283830754:web:49891612c491f25b49b9bb",
+    measurementId: "G-6K6LFJTMG0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
 
 const messaging = firebase.messaging();
 
